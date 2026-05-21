@@ -24,6 +24,7 @@
       fetch(`https:openweather.agw76638.workers.dev?${params}`)
         .then(res => res.json())
         .then(result => {
+          console.log(result);
           weather.innerText = `현재 날씨: ${result.main.temp}도`;
           description.innerText = `날씨 설명: ${result.weather[0].description}`;
           humidity.innerText = `습도: ${result.main.humidity}%`;
